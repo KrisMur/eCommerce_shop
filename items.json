@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Gray chair",
+    "img": "chair-grey.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "category": "chairs",
+    "price": "49.99"
+  },
+  {
+    "id": 2,
+    "title": "Table",
+    "img": "table.webp",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras urna nulla, volutpat sed ipsum at, rutrum pretium mauris.",
+    "category": "tables",
+    "price": "100.50"
+  },
+  {
+    "id": 3,
+    "title": "Sofa",
+    "img": "sofa.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "category": "sofas",
+    "price": "500.99"
+  },
+  {
+    "id": 4,
+    "title": "Wall light",
+    "img": "wall-light.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "category": "lights",
+    "price": "30.76"
+  },
+  {
+    "id": 5,
+    "title": "White chair",
+    "img": "chair-white.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "category": "chairs",
+    "price": "20.99"
+  },
+  {
+    "id": 6,
+    "title": "Pendant with shade and ceiling base",
+    "img": "pendents_light.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "category": "lights",
+    "price": "125.80"
+  }
+]
