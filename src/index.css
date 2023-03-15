@@ -61,6 +61,7 @@ header .shop-cart{
 }
 
 header .shop-cart-empty {
+  width: 450px;
   text-align: center;
   line-height: 100px; 
 }
