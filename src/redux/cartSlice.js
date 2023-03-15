@@ -1,18 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const cartSlice = createSlice({
-  name : 'orders',
-  initialState : [],
+  name: 'orders',
+  initialState: [],
   reducers: {
-  //додавання товару кнопкою + на картці
+    //додавання товару кнопкою + на картці
     addItem: (state, action) => {
       let orderedItem = {
         id: action.payload.id,
         title: action.payload.item,
-        qty : action.payload.qty,
+        qty: action.payload.qty,
+        price: action.payload.price,
+        img: action.payload.img
       };
 
-      const inCartItem = state.find((item) => item.id === orderedItem.id )
+      const inCartItem = state.find((item) => item.id === orderedItem.id)
 
       if (state.length === 0) {
         state.push(orderedItem);
@@ -20,8 +22,6 @@ const cartSlice = createSlice({
         (inCartItem) ? inCartItem.qty += orderedItem.qty : state.push(orderedItem);
       }
     }
-
-
   }
 })
 

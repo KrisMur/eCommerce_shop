@@ -14,11 +14,8 @@ export default function Header() {
           <li>Contacts</li>
           <li>Your account</li>
         </ul>
-        <FaShoppingBasket onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`}/>
-
-        {cartOpen && (
-          <Cart />
-        )}
+        <FaShoppingBasket onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`} />
+        {cartOpen && (<Cart />)}
       </div>
       <div className='presentation'></div>
     </header>
