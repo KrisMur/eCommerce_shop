@@ -15,7 +15,7 @@ export default function OrderItem({ order }) {
       </div>
       
       <h1>${order.price}</h1>
-      <h2>{order.qty * order.price}</h2>
+      <h2>{(order.qty * order.price).toFixed(2)}</h2>
     </div>
   )
 }

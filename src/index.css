@@ -68,7 +68,8 @@ header .shop-cart-empty {
 
 header .shop-cart .item{
   display: grid;
-  grid-template-columns: 70px 120px auto 100px auto;
+  /* grid-template-columns: 70px 120px auto 100px auto; */
+  grid-template-columns: 70px 140px 70px 140px 200px;
   column-gap: 5px;
   row-gap: 10px;
   justify-items: center;
@@ -107,8 +108,10 @@ header .shop-cart .item .amount-button button:hover{
 
 header .shop-cart .header-cart{
   display: grid;
-  grid-template-columns: 70px 120px 50px 100px auto;
-  grid-template-rows: 70px auto 70px auto; 
+  /* grid-template-columns: 70px 120px 50px 100px auto; */
+  /* grid-template-columns: 70px 140px 70px 140px auto; */
+  /* grid-template-rows: 70px auto 70px auto;  */
+  grid-template-columns: 70px 140px 70px 140px 200px;
   column-gap: 5px;
   row-gap: 10px;
   justify-items: center;
