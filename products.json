@@ -5,7 +5,8 @@
     "img": "chair-grey.jpeg",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "category": "chairs",
-    "price": "49.99"
+    "price": "49.99",
+    "maxQty" : 100
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "img": "table.webp",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras urna nulla, volutpat sed ipsum at, rutrum pretium mauris.",
     "category": "tables",
-    "price": "100.50"
+    "price": "100.50",
+    "maxQty" : 100
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "img": "sofa.jpeg",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "category": "sofas",
-    "price": "500.99"
+    "price": "500.99",
+    "maxQty" : 100
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "img": "wall-light.jpeg",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "category": "lights",
-    "price": "30.76"
+    "price": "30.76",
+    "maxQty" : 100
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "img": "chair-white.jpeg",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "category": "chairs",
-    "price": "20.99"
+    "price": "20.99",
+    "maxQty" : 100
   },
   {
     "id": 6,
@@ -45,6 +50,7 @@
     "img": "pendents_light.jpg",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "category": "lights",
-    "price": "125.80"
+    "price": "125.80",
+    "maxQty" : 100
   }
 ]
