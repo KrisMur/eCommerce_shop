@@ -6,7 +6,7 @@ import { plusItem, minusItem } from '../redux/cartSlice';
 export default function OrderItem({ order }) {
   const dispatch = useDispatch();
 
-  let maxItemAvalibleInitial = Number(localStorage[order.id]);
+  let maxItemAvalibleInitial = Number(localStorage[`${order.id}`]);
   let [maxAvalible, setMaxAvalible] = useState(maxItemAvalibleInitial);
 
   const onClickPlus = () => {
@@ -14,7 +14,7 @@ export default function OrderItem({ order }) {
       dispatch(plusItem({
       id: order.id,
       }))
-      localStorage.setItem(order.id, maxAvalible-1);
+      localStorage.setItem(`${order.id}`, `${maxAvalible-1}`);
       setMaxAvalible(maxAvalible-1)
      } else {
       alert('Sorry, this is The maximum amount of the product that is available for sale.')
@@ -25,7 +25,7 @@ export default function OrderItem({ order }) {
     dispatch(minusItem({
       id: order.id,
     }))
-    localStorage.setItem(order.id, maxAvalible+1);
+    localStorage.setItem(`${order.id}`, `${maxAvalible+1}`);
     setMaxAvalible(maxAvalible+1)
   }
 

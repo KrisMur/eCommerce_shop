@@ -4,7 +4,7 @@ import { addItem } from '../redux/cartSlice';
 
 export default function Item({ item }) {
 
-  let maxItemAvalibleInitial = Number(localStorage[item.id]);
+  let maxItemAvalibleInitial = Number(localStorage[`${item.id}`]);
   let [maxAvalible, setMaxAvalible] = useState(maxItemAvalibleInitial);
 
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export default function Item({ item }) {
         price: item.price,
         img: item.img,
       }));
-      localStorage[item.id] = maxAvalible-qty;
+      localStorage.setItem(`${item.id}`, `${maxAvalible-qty}`);
       setMaxAvalible(maxAvalible-qty);
       setQty(1);
     } else {

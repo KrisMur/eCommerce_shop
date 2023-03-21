@@ -14,7 +14,7 @@ export default function Items() {
     }
 
     data.map(el => (
-      localStorage.setItem(`${el.id}`, el.maxQty)
+      localStorage.setItem(`${el.id}`, `${el.maxQty}`)
     ))
 
   return (
