@@ -11,7 +11,11 @@ export default function Items() {
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.error(error));
-  }
+    }
+
+    data.map(el => (
+      localStorage.setItem(`${el.id}`, el.maxQty)
+    ))
 
   return (
     <main>

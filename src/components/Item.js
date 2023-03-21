@@ -3,25 +3,36 @@ import { useDispatch } from 'react-redux'
 import { addItem } from '../redux/cartSlice';
 
 export default function Item({ item }) {
+
+  let maxItemAvalibleInitial = Number(localStorage[item.id]);
+  let [maxAvalible, setMaxAvalible] = useState(maxItemAvalibleInitial);
+
   const dispatch = useDispatch();
   const [qty, setQty] = useState(1);
 
+  
   const onChange = (e) => {
     let value = Number(e.target.value)
-    value > 1000
-      ? alert('Too big number of quantity')
-      : setQty(value)
+      value > 100 || value > maxAvalible
+      ? alert(`Too big number of quantity maximum amount ${maxAvalible}`)
+      : setQty(value);
   }
 
   const onClickAddButton = () => {
-    dispatch(addItem({
-      id: item.id,
-      item: item.title,
-      qty: qty,
-      price: item.price,
-      img: item.img
-    }));
-    setQty(1)
+    if (maxAvalible > 0 ) {
+      dispatch(addItem({
+        id: item.id,
+        item: item.title,
+        qty: qty,
+        price: item.price,
+        img: item.img,
+      }));
+      localStorage[item.id] = maxAvalible-qty;
+      setMaxAvalible(maxAvalible-qty);
+      setQty(1);
+    } else {
+      alert(`Sorry,the product is not available for sale`)
+    }
   }
 
   return (
@@ -32,7 +43,7 @@ export default function Item({ item }) {
       <div className='order'>
         <b>${item.price}</b>
         <label> Quantity:  &nbsp;
-          <input type="number" min="1" max="100" step="1" className="input" name="qty_item"  onChange={onChange} value = {qty || ''}></input>
+          <input type="number" min="1" max="100" step="1" className="input" name="qty_item" onChange={onChange} value = {qty || ''}></input>
         </label>
       </div>
       <div className='add-to-cart' onClick={onClickAddButton}> + </div>
